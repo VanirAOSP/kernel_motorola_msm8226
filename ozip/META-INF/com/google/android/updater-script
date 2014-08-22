@@ -1,4 +1,4 @@
-ui_print("Furnace Kernel for Moto G");
+ui_print("InSaNiTy Kernel for Moto G");
 ui_print("Installing kernel...");
 package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
 ui_print("Installing modules...");
