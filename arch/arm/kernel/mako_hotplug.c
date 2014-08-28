@@ -136,7 +136,7 @@ inline static bool cpus_cpufreq_work(void)
 		current_freq += cpufreq_quick_get(cpu);
 	}
 
-	return (current_freq /= 2) >= t->cpufreq_unplug_limit;
+	return (current_freq >> 1) >= t->cpufreq_unplug_limit;
 }
 
 static void cpu_revive(unsigned int load)
@@ -244,7 +244,7 @@ static void __ref decide_hotplug_func(struct work_struct *work)
 		cur_load += cpufreq_quick_get_util(cpu);
 	}
 
-	if (cur_load >= (t->load_threshold * 2))
+	if (cur_load >= (t->load_threshold << 1))
 	{
 		if (stats.counter < t->max_load_counter)
 			++stats.counter;
