@@ -5,11 +5,11 @@
 # the appropriate lines for dtbTool to compile it, if not prebuilt.
 build=~/downloads/InSaNiTy
 kernel="InSaNiTy"
-version="1.0"
+version="9-21-14"
 rom="aosp"
 variant="falcon"
 ramdisk=ramdisk
-toolchain=~/storage/toolchains/4.9/bin
+toolchain=~/kernel/kernel_motorola_msm8226/toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.08/bin
 toolchain2="arm-eabi-"
 config="msm8226_mmi_defconfig"
 kerneltype="zImage-dtb"
@@ -18,11 +18,11 @@ ps=2048
 base=0x00000000
 ramdisk_offset=0x01000000
 tags_offset=0x00000100
-cmdline="console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache androidboot.selinux=permissive"
+cmdline="console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=200M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 androidboot.selinux=permissive"
 
 if [ "$1" = "local" ]; then
 	build=~/downloads/InSaNiTy
-	toolchain=~/storage/toolchains/4.9/bin/
+	toolchain=~/kernel/kernel_motorola_msm8226/toolchain/arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.08/bin
 fi
 
 rm -rf out
