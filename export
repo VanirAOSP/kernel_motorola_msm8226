@@ -5,7 +5,7 @@
 # the appropriate lines for dtbTool to compile it, if not prebuilt.
 build=~/downloads/InSaNiTy
 kernel="InSaNiTy"
-version="9-21-14"
+version="9-23-14"
 rom="aosp"
 variant="falcon"
 ramdisk=ramdisk
